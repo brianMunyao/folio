@@ -1,0 +1,217 @@
+body {
+    background-color: #fcfcfc;
+}
+
+.grey {
+    color: #2a3e50;
+    opacity: 0.7;
+}
+
+.mainTop {
+    height: 100vh;
+    min-height: 450px;
+    position: relative;
+}
+
+nav.topNav {
+    height: 60px;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav.sideNav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    transform: translateX(100%);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background-color: #fff;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    overflow: auto;
+}
+
+.sideNav-close {
+    font-size: 40px;
+}
+
+.sideNavTop {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sidenav-link {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    opacity: 0.5;
+}
+
+.sidenav-link:hover {
+    opacity: 1;
+}
+
+.sidenav-btn {
+    font-size: 20px;
+    padding: 7px 15px;
+}
+
+.nav-link {
+    margin: 0 10px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover {
+    color: #006aff;
+    border-bottom: 2px solid #006aff;
+}
+
+.nav-btn {
+    margin-left: 10px;
+}
+
+.burger {
+    height: 27px;
+    width: 30px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.burger .line {
+    height: 2px;
+    background-color: #2a3e50;
+    transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.burger .line:nth-of-type(1) {
+    width: 80%;
+}
+
+.burger .line:nth-of-type(2) {
+    width: 60%;
+}
+
+.burger .line:nth-of-type(3) {
+    width: 90%;
+}
+
+.burger:hover .line {
+    width: 100%;
+}
+
+main {
+    position: absolute;
+    top: 60px;
+    bottom: 60px;
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+div.greeting {
+    font-size: 45px;
+    margin-bottom: 45px;
+}
+
+div.greetingSub {
+    font-size: 60px;
+    font-weight: 700;
+    padding: 0 100px;
+}
+
+div.scrollDown {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.scrollDown div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    cursor: pointer;
+}
+
+div.scrollDown div span {
+    letter-spacing: 1px;
+}
+
+div.scrollDown span.scrollIcon {
+    animation: scroll 1s infinite ease-in-out;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    main {
+        padding: 0 20px;
+    }
+    div.greeting {
+        font-size: 40px;
+    }
+    div.greetingSub {
+        font-size: 50px;
+        padding: 0 20px;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .burger {
+        display: flex;
+    }
+    .navs {
+        display: none;
+    }
+    main {
+        padding: 0 10px;
+    }
+    div.greeting {
+        font-size: 30px;
+    }
+    div.greetingSub {
+        font-size: 40px;
+        padding: 0 10px;
+    }
+    nav.topNav {
+        height: 50px;
+        padding: 0 30px;
+    }
+    span.logo {
+        font-size: 30px;
+    }
+}
