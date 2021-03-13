@@ -1,3 +1,6 @@
+# Personal Portfolio
+Check it out [here](https://brianmunyao.github.io/folio/).
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
